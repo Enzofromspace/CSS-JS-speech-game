@@ -14,5 +14,9 @@ export function handleResult({results}){
   // check that color in available in map
   if(!isValidColor(color)) return;
   // if yes, load UI
-  console.log('vald color');
+  const colorSpan = document.querySelector(`.${color}`);
+  colorSpan.classList.add('got');
+  console.log('valid color');
+  // change BG color
+  document.body.style.backgroundColor = color;
 }
