@@ -1,12 +1,14 @@
 import {handleResult} from './handlers';
 import {colorsByLength} from './colors';
+import './style.css';
+
 
 const colorsElement = document.querySelector('.colors');
 
-function displayColors(colors){
+function displayColors(colors){ 
   return colors.map(color => 
-     `<span class="color">${color}</span>`
-  );
+     `<span class="color" style="background: ${color}">${color}</span>`
+  ).join('');
 }
 
 window.SpeechRecognition = window.SpeechRecogition || window.webkitSpeechRecognition;
